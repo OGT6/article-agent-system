@@ -1,42 +1,46 @@
 # Article Agent System - Project Tracker
 
-**Last Updated:** 2025-01-30  
+**Last Updated:** 2025-01-30 (5:45 PM)  
 **Document Type:** Multi-AI Accessible Project Status & Vision Document  
-**Status:** 100% Operational | Currently Addressing Agent Architecture Issues
+**Status:** 100% Operational | Agent Architecture Fixed | Ready for Testing
 
 ## 🎯 Executive Summary
 
 **Project:** Automated Article Research & Writing Agent for oxbridgeGCSEtutor.com  
 **User:** Oxford-trained GCSE tutor, £200 Claude subscription  
-**Current Issue:** Research sub-agent incorrectly combining Steps 2, 4A, and 6 (different source requirements)  
-**Solution in Progress:** Separating agents by function with specialized tool access  
+**Previous Issue:** Research sub-agent was incorrectly combining Steps 2, 4A, and 6  
+**Solution Implemented:** ✅ Separated agents by function with v3 workflow  
 **Vision:** Claude Code as orchestrator for tool-specific sub-agents (like n8n/Make.com)
 
 ## 🚀 Current Sprint Focus
 
-### Active Problem: Agent Role Confusion
-- **Issue:** research-specialist-gcse trying to execute Steps 2, 4A, and 6 simultaneously
-- **Root Cause:** Step 4A needs competitor websites, Steps 2&6 need academic sources only
-- **Solution:** Create separate specialized agents with clear single purposes
-- **Status:** Architecture design in progress
+### ✅ RESOLVED: Agent Role Confusion
+- **Issue:** research-specialist-gcse was mixing academic and competitor sources
+- **Solution Implemented:** Created separate agents with clear responsibilities
+- **Status:** FIXED - v3 workflow implemented with proper separation
 
-### Immediate Next Steps
-1. Design separated agent architecture
-2. Create academic-research-agent (Steps 2 & 6 only)
-3. Create competitor-analysis-agent (Step 4A only)
-4. Update workflow to call agents sequentially
-5. Test with first article creation
+### Latest Achievements (Jan 30, 2025)
+1. ✅ Created academic-research-agent (Steps 2 & 6 only)
+2. ✅ Created competitor-analysis-agent (Step 4A only)
+3. ✅ Moved anti-cannibalization check to Step 0 (first step)
+4. ✅ Implemented free competitor analysis using WebFetch
+5. ✅ Configured default voice URLs for automatic calibration
+6. ✅ Created v3 workflow with optimized order
+
+### Ready for Testing
+- Workflow fully automated except: approval gates & WordPress upload
+- All tools are FREE (using existing subscriptions)
+- Anti-cannibalization check happens FIRST
+- Agents properly separated by source type
 
 ## 🏗️ System Architecture
 
-### Current State (Problematic)
+### Previous State (Now Fixed)
 ```
-research-specialist-gcse → Handles Steps 2, 4A, 6 (conflicting requirements)
-polish-specialist-oxbridge → Handles Steps 8a, 10
-oxbridge-writing-specialist → Handles Steps 9, 11
+research-specialist-gcse → Was handling Steps 2, 4A, 6 (conflicting requirements)
 ```
 
-### Target Architecture (Solution)
+### Current Architecture (Implemented in v3)
 ```
 Claude Code (Orchestrator)
 ├── academic-research-agent → Google Scholar API (Steps 2, 6)
@@ -47,25 +51,23 @@ Claude Code (Orchestrator)
 └── internal-linking-agent → WordPress tools (Step 10)
 ```
 
-## 📋 11-Step Workflow Breakdown
+## 📋 Updated Workflow v3 (Optimized Order)
 
+0. **Anti-Cannibalization Check** - NEW FIRST STEP! Check existing content
 1. **SEO Research & Competitive Forensics** - Identify keywords, analyze top 5
-2. **Deep Research Phase 1** - Academic sources ONLY ⚠️
+2. **Deep Research Phase 1** - Academic sources ONLY (academic-research-agent)
 3. **Article Outline Creation** - Quick Answer + Full exploration
-4. **Comprehensive Gap Analysis**
-   - 4A: Competitor analysis (commercial sites) ⚠️
-   - 4B: Internal content audit
-   - 4C: Integrated strategy
-5. **User Approval Gate** - Present outline
-6. **Deep Research Phase 2** - Academic sources ONLY ⚠️
+4. **External Competitor Analysis** - Commercial sites (competitor-analysis-agent)
+5. **User Approval Gate** - MANUAL: Present findings
+6. **Deep Research Phase 2** - Academic sources ONLY (academic-research-agent)
 7. **Outline Update** - Refine structure
-8. **Final Approval Gate** - Get writing approval
-9. **8a: Voice Calibration** - MANDATORY before writing
-10. **Article Writing** - Total market dominance
-11. **Strategic Internal Linking** - WordPress-ready
-12. **Harvard Reference List** - Complete bibliography
+8. **Final Approval Gate** - MANUAL: Get writing approval
+8a. **Voice Calibration** - AUTOMATIC with preset URLs
+9. **Article Writing** - Using Claude's best-in-class prose
+10. **Strategic Internal Linking** - WordPress-ready HTML
+11. **Harvard Reference List** - Complete bibliography
 
-⚠️ **Critical Issue:** Steps 2, 4A, and 6 have incompatible source requirements
+✅ **Issue Fixed:** Agents now properly separated by source type
 
 ## ✅ Completed Milestones
 
@@ -144,30 +146,47 @@ Article Agent/
 
 ## 🔄 Active Tasks
 
-- [ ] Design new agent architecture with clear separation
-- [ ] Create academic-research-agent specification
-- [ ] Create competitor-analysis-agent specification
-- [ ] Update workflow to use separated agents
-- [ ] Test complete workflow with new architecture
-- [ ] Document tool assignment per agent
-- [ ] Create first article with corrected workflow
+- [x] Design new agent architecture with clear separation ✅
+- [x] Create academic-research-agent specification ✅
+- [x] Create competitor-analysis-agent specification ✅
+- [x] Update workflow to use separated agents ✅
+- [x] Move anti-cannibalization to Step 0 ✅
+- [x] Configure default voice URLs ✅
+- [ ] Test complete workflow with new article
+- [ ] Push updates to GitHub
 
-## 🚧 Known Issues
+## 🚧 Previous Issues (Now Resolved)
 
-1. **Agent Role Confusion** - Research agent mixing academic and competitor sources
-2. **Workflow Conflicts** - Steps 2, 4A, 6 bundled incorrectly
-3. **Source Contamination** - Risk of using competitor sites for academic research
+1. ~~**Agent Role Confusion**~~ - ✅ FIXED with separate agents
+2. ~~**Workflow Conflicts**~~ - ✅ FIXED with v3 workflow
+3. ~~**Source Contamination**~~ - ✅ FIXED with clear agent boundaries
+4. ~~**Late Cannibalization Check**~~ - ✅ FIXED by moving to Step 0
+
+## 📈 Current Status
+
+**System is ready for production testing with:**
+- Zero additional costs (uses existing subscriptions)
+- Fully automated workflow (except approval gates)
+- Anti-cannibalization protection
+- Clean agent separation
+- Free competitor analysis using WebFetch
 
 ## 📊 Resource Status
 
 ### Available Commands
-- `/research-article` - Full 11-step workflow (needs fixing)
-- `/voice-calibrate` - Mandatory voice analysis
+- `/research-article` - Full workflow with v3 improvements ✅
+- `/voice-calibrate` - Now automatic with preset URLs ✅
 - `/voice-polish` - Polish existing articles
 - `/seo-analysis` - Keyword research
 - `/gap-analysis` - Competitive analysis
 - `/write-final` - Article writing
 - `/internal-linking` - WordPress links
+
+### Key Files
+- `core/research-article-v3.md` - Latest workflow with fixes
+- `agents/academic-research-agent.md` - Academic sources only
+- `agents/competitor-analysis-agent.md` - Commercial sources only
+- `core/VOICE-URLS-DEFAULT.md` - Preset voice references
 
 ### Critical Context
 - Voice: No em dashes, British spelling
