@@ -27,6 +27,15 @@
         "@modelcontextprotocol/server-puppeteer"
       ],
       "env": {}
+    },
+    "gdrive": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@isaacphi/mcp-gdrive"
+      ],
+      "env": {}
     }
   }
 }

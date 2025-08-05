@@ -4,12 +4,17 @@ An AI-powered article creation system designed for achieving competitive dominan
 
 ## 📊 Project Status & Multi-AI Collaboration
 
-**Current project status, active issues, and development progress are tracked in [PROJECT-TRACKER.md](./PROJECT-TRACKER.md)**
+**LIVE PROJECT STATUS: [Google Doc - Article Agent System Tracker](YOUR_GOOGLE_DOC_LINK_HERE)**
 
-This tracker is designed for multi-AI accessibility:
-- Claude can access via GitHub integration or direct file reading
-- ChatGPT can access via GitHub integration (Deep Research mode)
-- Always check PROJECT-TRACKER.md for the latest system status before making changes
+This repository contains:
+- System documentation and code files
+- Article outputs and drafts
+- Configuration files
+
+For current project status, active issues, and development progress:
+- Both Claude and Claude Code can access the Google Doc directly
+- Updates are reflected in real-time
+- No manual syncing required
 
 ## Table of Contents
 

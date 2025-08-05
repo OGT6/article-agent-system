@@ -12,8 +12,34 @@
       "Bash(tree:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git worktree:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp:*)",
+      "Bash(npx @modelcontextprotocol/server-memory:*)",
+      "Bash(sudo chown:*)",
+      "Bash(npm install:*)",
+      "Bash(node:*)",
+      "Bash(claude reload)",
+      "Bash(npx:*)",
+      "Bash(npm cache clean:*)",
+      "Bash(npm:*)",
+      "Bash(export PATH=~/.npm-global/bin:$PATH)",
+      "Bash(rm:*)",
+      "WebFetch(domain:asis.education)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git fetch:*)",
+      "WebFetch(domain:docs.google.com)"
     ],
     "deny": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "memory"
+  ]
 }

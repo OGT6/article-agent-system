@@ -1,0 +1,7 @@
+{
+  "gdrive": {
+    "command": "npx",
+    "args": ["-y", "@isaacphi/mcp-gdrive"]
+  }
+}
+EOF < /dev/null
